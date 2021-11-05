@@ -1,0 +1,55 @@
+2) Realizar las siguientes consultas:
+
+2.1
+SELECT `apellido`  FROM `personas` 
+
+2.2
+Select DISTINCT`apellido` from `personas` 
+
+2.3
+Select * from `personas` where apellido='Lopez'
+
+2.4
+Select * from `personas` where apellido='Lopez' or apellido='Perez'
+
+2.5
+SELECT * FROM `personas`  WHERE id_depto = 14
+
+2.6
+SELECT * FROM `personas`  WHERE id_depto IN (37,77)
+
+2.7
+select * from `personas` where apellido Like'P%'
+
+2.8
+select SUM(presupuesto) from departamentos
+
+2.9
+
+Select * from personas inner join departamentos on personas.id_depto=
+departamentos.numero_depto
+
+2.10
+select personas.nombre,apellido,departamentos.nombre_depto,presupuesto from personas inner join departamentos on personas.id_depto=departamentos.numero_depto;
+
+2.11
+Select personas.nombre,personas.apellido,departamentos.presupuesto from personas,departamentos where personas.id_depto=departamentos.numero_depto and presupuesto>60000
+
+2.12
+insert into departamentos(numero_depto,nombre_depto,presupuesto)values(11,'Calidad',40000)
+
+insert into personas(dni,nombre,apellido,id_depto)values(89267109,
+"Esther","Vazquez",11)
+
+
+2.13
+Update departamentos set presupuesto=presupuesto/1.10
+
+2.14
+Update personas set id_depto=14 where id_depto=77
+
+2.15
+delete from personas where id_depto=14
+
+2.16
+delete from departamentos where presupuesto>90000
